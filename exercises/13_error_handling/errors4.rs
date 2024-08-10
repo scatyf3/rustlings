@@ -10,9 +10,12 @@ enum CreationError {
 struct PositiveNonzeroInteger(u64);
 
 impl PositiveNonzeroInteger {
-    fn new(value: i64) -> Result<Self, CreationError> {
-        // TODO: This function shouldn't always return an `Ok`.
-        Ok(Self(value as u64))
+    fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
+        match value{
+            ..=-1 => Err(CreationError::Negative), //..=-1来表示小于等于0的范围
+            0=> Err(CreationError::Zero),
+            _=> Ok(PositiveNonzeroInteger(value as u64))
+        }
     }
 }
 
