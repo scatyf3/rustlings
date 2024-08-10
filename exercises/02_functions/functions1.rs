@@ -1,5 +1,13 @@
-// TODO: Add some function with the name `call_me` without arguments or a return value.
+// functions1.rs
+//
+// Execute `rustlings hint functions1` or use the `hint` watch subcommand for a
+// hint.
+
 
 fn main() {
-    call_me(); // Don't change this line
+    call_me();
+}
+
+fn call_me()->i32{
+    return 114;
 }
