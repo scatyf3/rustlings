@@ -4,8 +4,8 @@
 #[allow(dead_code)]
 mod delicious_snacks {
     // TODO: Add the following two `use` statements after fixing them.
-    // use self::fruits::PEAR as ???;
-    // use self::veggies::CUCUMBER as ???;
+    pub use self::fruits::PEAR as fruit; //hint by other's github src, 需要修改这里为pub
+    pub use self::veggies::CUCUMBER as veggie;
 
     mod fruits {
         pub const PEAR: &str = "Pear";
